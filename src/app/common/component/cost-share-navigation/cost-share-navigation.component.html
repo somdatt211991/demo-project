@@ -1,0 +1,10 @@
+<div class="col-md-3  sidebar p-0">
+  <ul class="nav nav-sidebar">
+      <li  *ngFor="let costitem of costshare"  [class.active]="costitem.status == 'true'">
+              <a [routerLink]="['cost-share/cost-share-setUp']">{{costitem.heading}} 
+                 <i *ngIf="costitem.icon" class="fa fa-check-circle-o pull-right" aria-hidden="true"></i>
+              </a>
+      </li>
+    
+    </ul>
+</div>

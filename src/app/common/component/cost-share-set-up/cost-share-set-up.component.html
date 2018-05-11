@@ -1,0 +1,44 @@
+
+  
+  <div class="col-md-12 p-z p-b-30">
+      <button type="button" class="btn-primary" style="display:inline-block">Cost Shares</button>
+      <a href="#" *ngFor="let item of costbreadcrumb; let i = index "  class="cost-breadcrumb">{{item}} <i *ngIf="i < 8"  class="fa fa-angle-right breadcrumb-arrow" aria-hidden="true"></i></a> 
+  </div>
+  <div class="container-fluid">
+    <p class="font-style">Cost Share SetUp</p>
+    <h4 >Lines of Business</h4>
+    <form>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Blue Cross</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Blue Shield</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" value="" >Major Medical</label>
+      </div>
+    </form>
+
+    <h4>Select Cost Share Type</h4>
+        <!-- <div class="col-md-12"><button class="col-md-2 btn box-shadow--4dp"> Maximum</button></div>
+        <div class="col-md-12"><button class="col-md-2 btn box-shadow--4dp"> Deductible</button></div>
+        <div class="col-md-12"><button class="col-md-2 btn box-shadow--4dp"> Copay</button></div> -->
+        <div class="col-md-12"><a [routerLink]="['/co-insurance']">
+          <button class="col-md-2 btn box-shadow--4dp"> Maximum</button></a></div>
+          <div class="col-md-12"><a [routerLink]="['/co-insurance']">
+            <button class="col-md-2 btn box-shadow--4dp"> Deductible</button></a></div>
+            <div class="col-md-12"><a [routerLink]="['/co-insurance']">
+              <button class="col-md-2 btn box-shadow--4dp"> Copay</button></a></div>
+
+        <div class="col-md-12"><a [routerLink]="cost-share/coinsurance">
+        <button class="col-md-2 btn box-shadow--4dp"> Coinsurance</button></a></div>
+        <div class="col-md-12"><a [routerLink]="['/co-insurance']">
+          <button class="col-md-2 btn box-shadow--4dp"> Out Of Pocket</button></a></div>
+        <!-- <div class="col-md-12"><button class="col-md-2 btn box-shadow--4dp"> Out Of Pocket</button></div>    -->
+    </div>
+    <router-outlet></router-outlet>
+    <div class="col-md-12 footer">
+    <hr/>
+    <button type="button" class="btn btn-primary">Done</button>
+    </div>
+
