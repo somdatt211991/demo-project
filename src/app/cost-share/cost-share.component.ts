@@ -20,6 +20,7 @@ export class CostShareComponent implements OnInit {
    }
 
   ngOnInit() {
+    console.log("Hello welcome to git Learning");
   }
 
 }
